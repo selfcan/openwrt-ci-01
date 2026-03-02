@@ -72,7 +72,7 @@ git clone --depth=1 https://github.com/ximiTech/luci-app-msd_lite package/luci-a
 git clone --depth=1 https://github.com/ximiTech/msd_lite package/msd_lite
 
 # MosDNS
-git clone --depth=1 https://github.com/sbwml/luci-app-mosdns package/luci-app-mosdns
+#git clone --depth=1 https://github.com/sbwml/luci-app-mosdns package/luci-app-mosdns
 
 # Alist
 git clone --depth=1 https://github.com/sbwml/luci-app-alist package/luci-app-alist
@@ -121,6 +121,14 @@ find package/luci-theme-*/* -type f -name '*luci-theme-*' -print -exec sed -i '/
 # sed -i 's/services/vpn/g' feeds/luci/applications/luci-app-v2ray-server/luasrc/controller/*.lua
 # sed -i 's/services/vpn/g' feeds/luci/applications/luci-app-v2ray-server/luasrc/model/cbi/v2ray_server/*.lua
 # sed -i 's/services/vpn/g' feeds/luci/applications/luci-app-v2ray-server/luasrc/view/v2ray_server/*.htm
+
+git clone https://github.com/hudra0/luci-app-qosmate.git package/luci-app-qosmate
+git clone https://github.com/hudra0/qosmate.git package/qosmate 
+git clone https://github.com/selfcan/luci-app-qbittorrent.git package/luci-app-qbittorrent
+git clone https://github.com/gaobin89/luci-app-timecontrol.git package/luci-app-timecontrol
+git_sparse_clone master https://github.com/kenzok8/openwrt-packages adguardhome luci-app-adguardhome
+git clone https://github.com/sbwml/luci-app-airplay2.git package/luci-app-airplay2
+git clone https://github.com/sbwml/luci-app-airconnect.git package/luci-app-airconnect
 
 ./scripts/feeds update -a
 ./scripts/feeds install -a
